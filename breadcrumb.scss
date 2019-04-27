@@ -1,0 +1,58 @@
+.c-breadcrumb {
+  display: flex;
+  
+  $gutter-item: 1rem;
+  
+  /** elements
+   **/
+  
+  &__item {
+    padding: 0 $gutter-item;
+    
+    &:first-child {
+      padding-left: 0;
+    }
+    
+    &:last-child {
+      padding-right: 0;
+      
+      .c-breadcrumb__anchor {
+        &:before {
+          background-image: none;
+        }
+      }
+    }
+  }
+  
+  &__anchor {
+    display: flex;
+    font-size: 12px;
+    padding: .04rem;
+    position: relative;
+    font-weight: var(--o-font-bold);
+    letter-spacing: .3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--o-color-black-25);
+    
+    &:before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: $gutter-item * 2;
+      right: -($gutter-item * 2);
+      background: url('https://cdn.zeplin.io/5c9544f287814d603eea176a/assets/816A45CC-4567-41AB-B04D-0839AB6E9219.svg') center center no-repeat;
+      background-size: 1rem 1rem;
+    }
+    
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+    
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 .2rem var(--o-color-outline);
+    }
+  }
+}

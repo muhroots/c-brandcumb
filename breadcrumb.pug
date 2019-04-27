@@ -1,0 +1,13 @@
+- var BreadcrumbList = 'http://schema.org/BreadcrumbList'
+- var ListItem = 'http://schema.org/ListItem'
+
+mixin breadcrumb(props)
+  if (props && props.length)
+    ol.c-breadcrumb.o-list(itemscope itemtype=BreadcrumbList)
+      each prop, index in props
+        - var position = index
+
+        li.c-breadcrumb__item(itemprop="itemListElement" itemscope itemtype=ListItem)
+          a.c-breadcrumb__anchor(itemprop="item" href=prop.href)
+            span(itemprop="name")=prop.name
+            meta(itemprop="position" content=(++position))

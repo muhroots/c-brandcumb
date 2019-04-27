@@ -1,0 +1,19 @@
+{
+  "name": "c-breadcrumbs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muhroots/c-breadcrumbs.git"
+  },
+  "author": "muhroots",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/muhroots/c-breadcrumbs/issues"
+  },
+  "homepage": "https://github.com/muhroots/c-breadcrumbs#readme"
+}
