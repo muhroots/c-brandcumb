@@ -6,7 +6,16 @@ $ npm i fgn-breadcrumbs
 In Pug Template:
 ```js
 
-- let Data = [{ name: "Como Solicitar", href: "#" }, { name: "Cartão de crédito", href: "#" }, { name: "Nubank", href: "#" }]
+- let Data = [{ 
+  name: "Como Solicitar", 
+  href: "#" 
+}, { 
+  name: "Cartão de crédito", 
+  href: "#" 
+}, { 
+  name: "Nubank", 
+  href: "#" 
+}]
 
 +breadcrumb(Data)
 ```
@@ -16,6 +25,9 @@ Mixin Doc:
 - let BreadcrumbList = 'http://schema.org/BreadcrumbList'
 - let ListItem = 'http://schema.org/ListItem'
 
+/** return breadcrumb component
+ ** @param {object} props - object w/ {name: "", href: ""}
+ **/
 mixin breadcrumb(props)
   ol.c-breadcrumb.o-list(itemscope itemtype=BreadcrumbList)
     each prop, index in props
